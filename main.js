@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        Hacky Audio Cutoff Fix
 // @namespace   wanikaniaudiocutoff
-// @include     /^https://(www|preview).wanikani.com/(lesson|review)
-// @version     0.0.1
+// @include     /^https://(www|preview).wanikani.com/(lesson|review|subjects|subject-lessons)
+// @version     0.0.2
 // @run-at      document-end
 // @grant       none
 // ==/UserScript==
@@ -11,7 +11,7 @@
 // See: https://stackoverflow.com/a/70551742/12347616
 var player = document.createElement('audio');
 player.loop = true
-player.volume = 0.01
+player.volume = 0.00001
 // See: https://www.chosic.com/download-audio/32083/
 player.src = "https://www.chosic.com/wp-content/uploads/2022/04/Cozy-Place-Chill-Background-Music.mp3"
 player.play()
